@@ -1,13 +1,141 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.main {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.container {
+  border: 2px solid black;
+}
+
+.product-container {
+  border-right: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: auto;
+}
+
+.product-card {
+  margin: 20px 0;
+  padding: 10px;
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-card > p {
+  text-align: center;
+  margin: 2px 0;
+}
+
+.product-card > img {
+  height: 200px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.prod-card-btn {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  background-color: green;
+}
+
+.remove-from-cart-btn {
+  background-color: red;
+}
+
+.cart-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.cart-main {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.cart-product-card {
+  padding: 2px 5px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 0 5px;
+  border-radius: 5px;
+}
+
+.cart-product-card > img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.cart-product-details {
+  font-size: 12px;
+  font-family: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-product-details > p {
+  text-align: center;
+}
+
+.cart-product-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-product-btns > button {
+  padding: 5px;
+  width: 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
